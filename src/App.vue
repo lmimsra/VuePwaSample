@@ -8,7 +8,8 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+  @import "~bulma/bulma";
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
