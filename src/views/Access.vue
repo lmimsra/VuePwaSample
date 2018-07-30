@@ -1,5 +1,10 @@
 <template>
-    <div></div>
+    <div>
+        <p class="title">アクセス情報</p>
+        <article>
+            fndsjknalfhdjksalhfjdksal
+        </article>
+    </div>
 </template>
 
 <script>

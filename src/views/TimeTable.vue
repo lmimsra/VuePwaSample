@@ -1,5 +1,10 @@
 <template>
-    <div></div>
+    <div>
+        <p class="title">タイムテーブル</p>
+        <article>
+            fdhfsajklfhds;afdsjkahfsdjkla
+        </article>
+    </div>
 </template>
 
 <script>

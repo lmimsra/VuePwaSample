@@ -1,16 +1,26 @@
 <template>
     <div id="app" class="section">
-        <div id="nav">
+        <!--<div id="nav">-->
             <!--<router-link to="/">Home</router-link> |-->
             <!--<router-link to="/about">About</router-link> |-->
+            <!--<router-link to="/">概要</router-link>-->
+            <!--|-->
+            <!--<router-link to="/timetable">タイムテーブル</router-link>-->
+            <!--|-->
+            <!--<router-link to="/access">アクセス</router-link>-->
+        <!--</div>-->
+        <p>この辺に画像</p>
+        <div class="spacing">
+            <router-view/>
+        </div>
+        <author/>
+        <nav id="nav" class="navbar is-fixed-bottom is-success">
             <router-link to="/">概要</router-link>
             |
             <router-link to="/timetable">タイムテーブル</router-link>
             |
             <router-link to="/access">アクセス</router-link>
-        </div>
-        <router-view/>
-        <author/>
+        </nav>
     </div>
 </template>
 <script>
@@ -40,10 +50,14 @@
 
     #nav a {
         font-weight: bold;
-        color: #2c3e50;
+        color: white;
     }
 
     #nav a.router-link-exact-active {
-        color: #42b983;
+        color: black;
+    }
+
+    .spacing {
+        margin: 10px 0;
     }
 </style>
