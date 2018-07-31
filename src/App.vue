@@ -1,20 +1,18 @@
 <template>
-    <div id="app" class="section">
-        <!--<div id="nav">-->
-            <!--<router-link to="/">Home</router-link> |-->
-            <!--<router-link to="/about">About</router-link> |-->
-            <!--<router-link to="/">概要</router-link>-->
-            <!--|-->
-            <!--<router-link to="/timetable">タイムテーブル</router-link>-->
-            <!--|-->
-            <!--<router-link to="/access">アクセス</router-link>-->
-        <!--</div>-->
+    <div id="app" class="nav-spacing">
+        <!--<nav class="navbar is-fixed-top is-success nav-origin">-->
+        <!--<router-link to="/">概要</router-link>-->
+        <!--|-->
+        <!--<router-link to="/timetable">タイムテーブル</router-link>-->
+        <!--|-->
+        <!--<router-link to="/access">アクセス</router-link>-->
+        <!--</nav>-->
         <p>この辺に画像</p>
         <div class="spacing">
             <router-view/>
         </div>
         <author/>
-        <nav id="nav" class="navbar is-fixed-bottom is-success">
+        <nav class="navbar is-fixed-bottom is-success nav-origin is-hidden-tablet">
             <router-link to="/">概要</router-link>
             |
             <router-link to="/timetable">タイムテーブル</router-link>
@@ -30,6 +28,16 @@
         name: 'App',
         components: {
             Author
+        },
+        data() {
+            return {
+                width: window.innerWidth
+            }
+        },
+        computed: {
+            isDesktop: () => {
+                return window.matchMedia('(min-width: 1024px)').matches;
+            }
         }
     }
 </script>
@@ -44,20 +52,23 @@
         color: #2c3e50;
     }
 
-    #nav {
+    .nav-origin {
         padding: 30px;
-    }
+        a {
+            font-weight: bold;
+            color: white;
+        }
+        a.router-link-exact-active {
+            color: black;
+        }
 
-    #nav a {
-        font-weight: bold;
-        color: white;
-    }
-
-    #nav a.router-link-exact-active {
-        color: black;
     }
 
     .spacing {
         margin: 10px 0;
+    }
+
+    .nav-spacing {
+        padding: 20px 20px 85px 20px;
     }
 </style>
