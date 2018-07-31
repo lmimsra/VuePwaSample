@@ -1,7 +1,9 @@
 > epark:event-bbq
+### 最低限使用する画面サイズ
+- is-mobile
+- is-tablet
 
 ### 画面サイズメモ
-
 ```　
 max-width:768px  .is-mobile
 min-width:769px  .is-tablet

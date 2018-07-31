@@ -1,13 +1,12 @@
 <template>
-    <div id="app" class="nav-spacing">
-        <!--<nav class="navbar is-fixed-top is-success nav-origin">-->
-        <!--<router-link to="/">概要</router-link>-->
-        <!--|-->
-        <!--<router-link to="/timetable">タイムテーブル</router-link>-->
-        <!--|-->
-        <!--<router-link to="/access">アクセス</router-link>-->
-        <!--</nav>-->
-        <p>この辺に画像</p>
+    <div id="app" class="nav-bottom-spacing" v-bind:class="classObject">
+        <nav class="navbar is-fixed-top is-success nav-origin is-hidden-mobile">
+            <router-link to="/">概要</router-link>
+            |
+            <router-link to="/timetable">タイムテーブル</router-link>
+            |
+            <router-link to="/access">アクセス</router-link>
+        </nav>
         <div class="spacing">
             <router-view/>
         </div>
@@ -31,13 +30,23 @@
         },
         data() {
             return {
-                width: window.innerWidth
+                classObject :{
+                    'nav-top-spacing': false
+                }
             }
         },
-        computed: {
-            isDesktop: () => {
-                return window.matchMedia('(min-width: 1024px)').matches;
+        methods: {
+            isTablet: function(){
+                this.classObject["nav-top-spacing"] = window.matchMedia('(min-width: 769px)').matches ;
             }
+        },
+        created: function () {
+            // コンポーネント作成時に実行
+            window.addEventListener('resize', this.isTablet)
+        },
+        beforeDestroy:function () {
+            // コンポーネント破棄時に実行
+            window.removeEventListener('resize', this.isTablet)
         }
     }
 </script>
@@ -68,7 +77,11 @@
         margin: 10px 0;
     }
 
-    .nav-spacing {
+    .nav-bottom-spacing {
         padding: 20px 20px 85px 20px;
+    }
+
+    .nav-top-spacing {
+        padding: 85px 20px 20px 20px;
     }
 </style>
