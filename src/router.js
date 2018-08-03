@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import OverView from './views/OverView'
 import TimeTable from './views/TimeTable'
 import Access from './views/Access'
+import Login from './views/Login'
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
             path: '/access',
             name: 'Access',
             component: Access
+        },
+        {
+            path: '/login',
+            name: 'Login',
+            component: Login
         }
     ]
 })
