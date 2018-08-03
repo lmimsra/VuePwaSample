@@ -1,4 +1,6 @@
 > epark:event-bbq
+### 必要要件
+SPA, PWA, レスポンシブ, 
 ### 最低限使用する画面サイズ
 - is-mobile
 - is-tablet
