@@ -5,11 +5,11 @@
                 <p>Author</p>
             </div>
             <div class="message-body">
-                <p>作成者：LiMa</p>
+                <p>作成者：近藤</p>
                 <p>フレームワーク：Vue.js 2.5.16</p>
                 <p>CSS：Bulma 0.7.1</p>
-                <p>他：PWA, vue-cli 3.0.0-rc.3</p>
-                <p>突貫なのでAPIとか何も繋がっていませんあしからず・・・・</p>
+                <p>他：PWA, vue-cli 3.0.0-rc.3, firebase</p>
+                <p>Authentication, RealTimeDatabase, Notification</p>
             </div>
         </article>
     </div>
