@@ -33,8 +33,8 @@
             </tbody>
         </table>
         <div class="panel is-danger">
-            <div class="panel-block">
-            このサイトはPWAとなっています。ホーム画面に追加するとネイティブアプリっぽくなります。
+            <div class="panel-block tex-center">
+                このサイトはPWAとなっています。ホーム画面に追加するとネイティブアプリっぽくなります。
             </div>
         </div>
     </div>
@@ -47,8 +47,12 @@
 </script>
 
 <style scoped>
- table{
-     margin-left: auto;
-     margin-right: auto;
- }
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tex-center{
+        margin-left: auto;
+        margin-right: auto;
+    }
 </style>

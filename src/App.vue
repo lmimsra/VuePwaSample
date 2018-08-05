@@ -1,6 +1,6 @@
 <template>
     <div id="app" class="nav-bottom-spacing" v-bind:class="classObject">
-        <nav class="navbar is-fixed-top is-success nav-origin is-hidden-mobile">
+        <nav class="navbar is-fixed-top is-success nav-origin is-hidden-mobile is-block">
             <router-link to="/">概要</router-link>
             |
             <router-link to="/timetable">タイムテーブル</router-link>
@@ -62,6 +62,7 @@
     }
 
     .nav-origin {
+        text-align: center;
         padding: 30px;
         a {
             font-weight: bold;

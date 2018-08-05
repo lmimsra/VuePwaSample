@@ -9,7 +9,7 @@
                 <p>フレームワーク：Vue.js 2.5.16</p>
                 <p>CSS：Bulma 0.7.1</p>
                 <p>他：PWA, vue-cli 3.0.0-rc.3, firebase</p>
-                <p>Authentication, RealTimeDatabase, Notification</p>
+                <p>Authentication, RealTimeDatabase</p>
             </div>
         </article>
     </div>
