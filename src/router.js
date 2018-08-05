@@ -5,10 +5,11 @@ import OverView from './views/OverView'
 import TimeTable from './views/TimeTable'
 import Access from './views/Access'
 import Login from './views/Login'
+import firebase from 'firebase'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
     mode: 'history',
     routes: [
         {
@@ -27,22 +28,59 @@ export default new Router({
         {
             path: '/',
             name: 'OverView',
-            component: OverView
+            component: OverView,
+            meta: {requireAuth: true}
         },
         {
             path: '/timetable',
             name: 'TimeTable',
-            component: TimeTable
+            component: TimeTable,
+            meta: {requireAuth: true}
         },
         {
             path: '/access',
             name: 'Access',
-            component: Access
+            component: Access,
+            meta: {requireAuth: true}
         },
         {
             path: '/login',
             name: 'Login',
             component: Login
+        },
+        {
+            path: '*'
         }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    let requiresAuth = to.matched.some(record => record.meta.requireAuth)
+    if (requiresAuth) {
+        // このルートはログインされているかどうか認証が必要です。
+        // もしされていないならば、ログインページにリダイレクトします。
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                next()
+            } else {
+                next({
+                    path: '/login',
+                    query: {redirect: to.fullPath}
+                })
+            }
+        })
+    } else {
+        console.log(to.path+", "+from.path)
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // if (to.path === '/login') next(false)
+                //ログイン中にログインページへいけないようにする
+                next({path: '/'})
+            } else {
+                next()
+            }
+        })
+    }
+})
+
+export default router
