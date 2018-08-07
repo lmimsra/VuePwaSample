@@ -7,17 +7,18 @@
                     <strong>電車</strong><br/>
                     最寄り駅：東武野田線(アーバンパークライン)<br/>
                     清水公園駅<br/>
-                    池袋からの所要時間：1時間20分<br/>
-                    <img :src="image"/>
+                    池袋からの所要時間：約1時間20分<br/>
+                    ※画像は仮です<br/>
+                    <img :src="train"/>
                 </article>
                 <article class="tile is-child">
                     <strong>自家用車</strong><br/>
                     常磐自動車道流山インター → 松戸野田道路経由	約12km<br/>
                     常盤自動車道柏インター → 国道16号線経由	約12km<br/>
                     越谷（国道４号線）→ 野田街道経由	約12km<br/>
-                    所要時間：池袋から１時間30分<br/>
+                    所要時間：池袋から約１時間30分<br/>
                     第３駐車場が一番近い駐車場になります<br/>
-                    ※別途駐車料金¥800かかります。
+                    ※別途駐車料金¥800かかります。<br/>
                     <img :src="parking"/>
                 </article>
                 <article class="tile is-child">
