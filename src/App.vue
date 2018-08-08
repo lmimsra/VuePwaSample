@@ -7,7 +7,7 @@
             |
             <router-link to="/access">アクセス</router-link>
             |
-            <router-link to="/bingo">ビンゴ！</router-link>
+            <router-link to="/bingo">ビンゴ</router-link>
         </nav>
         <div class="spacing">
             <router-view/>
@@ -20,7 +20,7 @@
             |
             <router-link to="/access">アクセス</router-link>
             |
-            <router-link to="/bingo">ビンゴ！</router-link>
+            <router-link to="/bingo">ビンゴ</router-link>
         </nav>
     </div>
 </template>
@@ -68,7 +68,8 @@
 
     .nav-origin {
         text-align: center;
-        padding: 30px;
+        padding: 30px 5px 30px 5px;
+
         a {
             font-weight: bold;
             color: white;
