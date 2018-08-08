@@ -6,6 +6,8 @@
             <router-link to="/timetable">タイムテーブル</router-link>
             |
             <router-link to="/access">アクセス</router-link>
+            |
+            <router-link to="/bingo">ビンゴ！</router-link>
         </nav>
         <div class="spacing">
             <router-view/>
@@ -17,6 +19,8 @@
             <router-link to="/timetable">タイムテーブル</router-link>
             |
             <router-link to="/access">アクセス</router-link>
+            |
+            <router-link to="/bingo">ビンゴ！</router-link>
         </nav>
     </div>
 </template>
