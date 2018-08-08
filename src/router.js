@@ -4,6 +4,8 @@ import OverView from './views/OverView'
 import TimeTable from './views/TimeTable'
 import Access from './views/Access'
 import Login from './views/Login'
+import Bingo from './views/Bingo'
+
 import firebase from 'firebase'
 
 Vue.use(Router)
@@ -27,6 +29,12 @@ let router = new Router({
             path: '/access',
             name: 'Access',
             component: Access,
+            meta: {requireAuth: true}
+        },
+        {
+            path: '/bingo',
+            name: 'Bingo',
+            component: Bingo,
             meta: {requireAuth: true}
         },
         {

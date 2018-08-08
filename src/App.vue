@@ -42,6 +42,7 @@
         },
         created: function () {
             // コンポーネント作成時に実行
+            this.isTablet()
             window.addEventListener('resize', this.isTablet)
         },
         beforeDestroy:function () {
