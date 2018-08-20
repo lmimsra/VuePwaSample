@@ -5,8 +5,9 @@
                 <p>Author</p>
             </div>
             <div class="message-body">
-                <p>app version 1.0.2</p>
-                <p>safari のアロー関数エラーを解消(かも)</p>
+                <p>app version 1.1.0(8/20)</p>
+                <p>インフォメーションページ作成</p>
+                <p>概要ページにて重要な情報を表示できるように変更</p>
                 <p>作成者：近藤</p>
                 <p>フレームワーク：Vue.js 2.5.16</p>
                 <p>CSS：Bulma 0.7.1</p>

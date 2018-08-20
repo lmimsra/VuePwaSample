@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="notification is-primary">
+        <div class="notification is-danger" v-if="event_info !== 'not'">
             {{event_info}}
         </div>
         <p class="title">イベントの概要</p>

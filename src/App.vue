@@ -9,7 +9,7 @@
             |
             <router-link to="/bingo">ビンゴ</router-link>
             |
-            <router-link to="/bingo">info</router-link>
+            <router-link to="/info">info</router-link>
         </nav>
         <div class="spacing">
             <router-view/>
@@ -24,7 +24,7 @@
             |
             <router-link to="/bingo">ビンゴ</router-link>
             |
-            <router-link to="/bingo">info</router-link>
+            <router-link to="/info">info</router-link>
         </nav>
     </div>
 </template>

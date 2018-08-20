@@ -5,6 +5,7 @@ import TimeTable from './views/TimeTable'
 import Access from './views/Access'
 import Login from './views/Login'
 import Bingo from './views/Bingo'
+import Info from './views/info'
 
 import firebase from 'firebase'
 
@@ -35,6 +36,12 @@ let router = new Router({
             path: '/bingo',
             name: 'Bingo',
             component: Bingo,
+            meta: {requireAuth: true}
+        },
+        {
+            path: '/info',
+            name: 'info',
+            component: Info,
             meta: {requireAuth: true}
         },
         {
