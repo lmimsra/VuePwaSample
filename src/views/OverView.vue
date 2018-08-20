@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="notification is-primary">
+            {{event_info}}
+        </div>
         <p class="title">イベントの概要</p>
         <table class="table is-hoverable">
             <tbody>
@@ -41,8 +44,20 @@
 </template>
 
 <script>
+    import firebase from 'firebase'
     export default {
-        name: "OverView"
+        name: "OverView",
+        data (){
+            return {
+                event_info: ''
+            }
+        },
+        created : function () {
+            var connection = firebase.database().ref('/info/important')
+            connection.on('value', snapshot => {
+                this.event_info = snapshot.val()
+            })
+        }
     }
 </script>
 

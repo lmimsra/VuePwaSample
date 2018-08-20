@@ -8,6 +8,8 @@
             <router-link to="/access">アクセス</router-link>
             |
             <router-link to="/bingo">ビンゴ</router-link>
+            |
+            <router-link to="/bingo">info</router-link>
         </nav>
         <div class="spacing">
             <router-view/>
@@ -21,6 +23,8 @@
             <router-link to="/access">アクセス</router-link>
             |
             <router-link to="/bingo">ビンゴ</router-link>
+            |
+            <router-link to="/bingo">info</router-link>
         </nav>
     </div>
 </template>
@@ -34,14 +38,14 @@
         },
         data() {
             return {
-                classObject :{
+                classObject: {
                     'nav-top-spacing': false
                 }
             }
         },
         methods: {
-            isTablet: function(){
-                this.classObject["nav-top-spacing"] = window.matchMedia('(min-width: 769px)').matches ;
+            isTablet: function () {
+                this.classObject["nav-top-spacing"] = window.matchMedia('(min-width: 769px)').matches;
             }
         },
         created: function () {
@@ -49,7 +53,7 @@
             this.isTablet()
             window.addEventListener('resize', this.isTablet)
         },
-        beforeDestroy:function () {
+        beforeDestroy: function () {
             // コンポーネント破棄時に実行
             window.removeEventListener('resize', this.isTablet)
         }
