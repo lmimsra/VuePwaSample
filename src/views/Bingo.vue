@@ -37,8 +37,10 @@
             this.connection = firebase.database().ref('/bingo')
             this.connection.on('value', snapshot => {
                 this.bingoNum = snapshot.val()
-                if (this.bingoNum !== null) this.bingoNum.reverse()
-                this.len = this.bingoNum.length
+                if (this.bingoNum !== null) {
+                    this.bingoNum.reverse()
+                    this.len = this.bingoNum.length
+                }
                 // console.log(this.bingoNum)
                 // console.log(this.len)
 
