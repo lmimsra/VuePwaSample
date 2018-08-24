@@ -30,6 +30,9 @@
 </template>
 <script>
     import Author from './components/Author'
+    import {authConfig} from './config/firebaseConfig'
+    import firebase from 'firebase'
+    import {importantInfo, infosList, bingo} from './config/realTimeDatabase'
 
     export default {
         name: 'App',
@@ -47,6 +50,20 @@
             isTablet: function () {
                 this.classObject["nav-top-spacing"] = window.matchMedia('(min-width: 769px)').matches;
             }
+        },
+        mounted: function () {
+            if (!firebase.apps.length) {
+                firebase.initializeApp(authConfig);
+            }
+            importantInfo.on('value', snapshot => {
+                this.$store.state.important = snapshot.val()
+            })
+            infosList.on('value', snapshot => {
+                this.$store.state.info = snapshot.val()
+            })
+            bingo.on('value', snapshot => {
+                this.$store.state.bingo = snapshot.val()
+            })
         },
         created: function () {
             // コンポーネント作成時に実行
