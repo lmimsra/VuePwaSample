@@ -11,6 +11,7 @@
             |
             <router-link to="/info">info</router-link>
         </nav>
+        <Loading v-if="is_loading"/>
         <div class="spacing">
             <router-view/>
         </div>
@@ -30,6 +31,7 @@
 </template>
 <script>
     import Author from './components/Author'
+    import Loading from './components/Loading'
     import {authConfig} from './config/firebaseConfig'
     import firebase from 'firebase'
     import {importantInfo, infosList, bingo} from './config/realTimeDatabase'
@@ -37,13 +39,15 @@
     export default {
         name: 'App',
         components: {
-            Author
+            Author,
+            Loading
         },
         data() {
             return {
                 classObject: {
                     'nav-top-spacing': false
-                }
+                },
+                is_loading:true
             }
         },
         methods: {
@@ -52,6 +56,7 @@
             }
         },
         mounted: function () {
+            console.log("mounted")
             if (!firebase.apps.length) {
                 firebase.initializeApp(authConfig);
             }
@@ -65,7 +70,11 @@
                 this.$store.state.bingo = snapshot.val()
             })
         },
+        updated:function(){
+           this.is_loading=false
+        },
         created: function () {
+            console.log("created")
             // コンポーネント作成時に実行
             this.isTablet()
             window.addEventListener('resize', this.isTablet)

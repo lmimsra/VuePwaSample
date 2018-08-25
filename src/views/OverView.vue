@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div></div>
-        <div>
-            <div class="notification is-danger" v-if="this.$store.getters.importantInfo !== null">
+        <Loading v-if="loading"></Loading>
+        <div v-else>
+            <div class="notification is-danger" v-if="this.$store.getters.importantInfo !== 'no_message'">
                 {{this.$store.getters.importantInfo}}
             </div>
             <p class="title">イベントの概要</p>
@@ -47,8 +47,16 @@
 </template>
 
 <script>
+    import Loading from '../components/Loading'
+
     export default {
         name: "OverView",
+        components: {Loading},
+        data() {
+            return {
+                loading: false
+            }
+        }
     }
 </script>
 
