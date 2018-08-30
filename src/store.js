@@ -21,16 +21,18 @@ export default new Vuex.Store({
         // }
     },
     getters: {
-        bingoArray:function (state) {
+        bingoArray: function (state) {
             if (state.bingo !== null) {
-                state.bingo.reverse()
+                return state.bingo
+            } else {
+                return state.bingo
             }
-            return state.bingo
         },
-        eventInfo:function (state) {
+        eventInfo: function (state) {
+            console.log(state.info)
             return state.info
         },
-        importantInfo:function (state) {
+        importantInfo: function (state) {
             return state.important
         }
     }

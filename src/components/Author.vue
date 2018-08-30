@@ -5,12 +5,12 @@
                 <p>Author</p>
             </div>
             <div class="message-body">
-                <p>app version 1.1.1(8/23)</p>
-                <p>ホーム追加時のアイコン、faviconを作成</p>
+                <p>app version 1.2.0(8/30)</p>
+                <p>ロード画面追加</p>
                 <p>作成者：近藤</p>
                 <p>フレームワーク：Vue.js 2.5.16</p>
                 <p>CSS：Bulma 0.7.1</p>
-                <p>他：PWA, vue-cli 3.0.0-rc.3, firebase</p>
+                <p>他：PWA, Vuex, vue-cli 3.0.0-rc.3, firebase</p>
                 <p>Authentication, RealTimeDatabase</p>
             </div>
         </article>

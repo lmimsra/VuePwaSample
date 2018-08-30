@@ -3,12 +3,14 @@
         <p class="title">ビンゴ？(仮)</p>
         <div v-if="this.$store.getters.bingoArray !== null">
             今当たったのは・・・・<br/>
-            <div class="top-num">
-                <span id="topicon"><b>{{this.$store.getters.bingoArray[0]}}!</b></span>
-            </div>
-            <div v-for="(value,key) in this.$store.getters.bingoArray" v-bind:key="key">
-
-                <span class="title" v-show="key!==0">{{value}}</span>
+            <!--<div class="top-num">-->
+                <!--<span id="topicon"><b>{{this.$store.getters.bingoArray[0]}}!</b></span>-->
+            <!--</div>-->
+            <div v-for="(value,key,index) in this.$store.getters.bingoArray" v-bind:key="key">
+                <div class="top-num" v-if="index === 0">
+                <span id="topicon" >{{value}}!</span>
+                </div>
+                <span class="title" v-if="index !== 0">{{value}}</span>
             </div>
         </div>
         <div v-else>
@@ -24,6 +26,13 @@
 <script>
     export default {
         name: "Bingo",
+        computed : {
+            bunm:function () {
+                var array1 = this.$store.getters.bingoArray
+                return array1.reverse
+            }
+
+        }
     }
 </script>
 
