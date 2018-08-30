@@ -5,7 +5,7 @@
                 <p>Author</p>
             </div>
             <div class="message-body">
-                <p>app version 1.2.0(8/30)</p>
+                <p>app version 1.2.1(8/31)</p>
                 <p>ロード画面追加</p>
                 <p>作成者：近藤</p>
                 <p>フレームワーク：Vue.js 2.5.16</p>
