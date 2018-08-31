@@ -5,13 +5,14 @@
                 <p>Author</p>
             </div>
             <div class="message-body">
-                <p>app version 1.2.1(8/31)</p>
-                <p>ロード画面追加</p>
+                <p>app version 2.0.0(8/31)</p>
+                <p>画面の内容変更</p>
+                <p>firebase連携部分を修正</p>
                 <p>作成者：近藤</p>
                 <p>フレームワーク：Vue.js 2.5.16</p>
                 <p>CSS：Bulma 0.7.1</p>
                 <p>他：PWA, Vuex, vue-cli 3.0.0-rc.3, firebase</p>
-                <p>Authentication, RealTimeDatabase</p>
+                <p>Authentication, RealTimeDatabase, Hosting</p>
             </div>
         </article>
     </div>
