@@ -7,7 +7,6 @@
                     <strong>電車</strong><br/>
                     最寄り駅：東武野田線(アーバンパークライン)<br/>
                     清水公園駅<br/>
-                    池袋からの所要時間：約1時間20分<br/>
                     <!--<img :src="train"/>-->
                 </article>
                 <article class="tile is-child">
@@ -48,8 +47,8 @@
         name: "Access",
         data() {
             return {
-                parking: require('../assets/camp_map_02.png'),
-                train: require('../assets/camp_map_02.png')
+                parking: require('../assets/logo.png'),
+                train: require('../assets/logo.png')
             }
         }
     }
