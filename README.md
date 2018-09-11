@@ -1,11 +1,22 @@
-> epark:event-bbq
-### 必要要件
-SPA, PWA, レスポンシブ, 
-### 最低限使用する画面サイズ
-- is-mobile
-- is-tablet
+# pwa Sample
+## get start
+create "firebaseConfig.js"
+```
+const authConfig = {
+    apiKey: "xxxxxxxxxxxxx",
+    authDomain: "xxxxxxxxxxx.firebaseapp.com",
+    databaseURL: "https://xxxxxxxxx.firebaseio.com",
+    projectId: "xxxxxxx",
+    storageBucket: "xxxxxxxxxx",
+    messagingSenderId: "xxxxxxxxx"
+};
+export {authConfig}
+```
+```
+$ npm run serve
+```
 
-### 画面サイズメモ
+## bulma window size
 ```　
 max-width:768px  .is-mobile
 min-width:769px  .is-tablet
