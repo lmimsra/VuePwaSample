@@ -15,20 +15,15 @@ export default new Vuex.Store({
             state.info = dbData.info
         }
     },
-    actions: {
-        // databaseInitialise: function ({commit}) {
-        //
-        // }
-    },
+    actions: {},
     getters: {
         bingoArray: function (state) {
             //ビンゴの値がある場合配列に入れて反転
             if (state.bingo !== null) {
                 var num_array = new Array()
-                for (var index in state.bingo){
+                for (var index in state.bingo) {
                     num_array.push(state.bingo[index])
                 }
-                // console.log(num_array)
                 return num_array.reverse()
             } else {
                 return state.bingo
@@ -37,12 +32,10 @@ export default new Vuex.Store({
         eventInfo: function (state) {
             //infoがある場合配列に代入して反転
             if (state.info !== null) {
-                // console.log(state.info)
                 var info_array = new Array()
                 for (var index in state.info) {
                     info_array.push(state.info[index])
                 }
-                // console.log(info_array)
                 return info_array.reverse()
             } else {
                 return state.info

@@ -56,7 +56,6 @@
             }
         },
         mounted: function () {
-            console.log("mounted")
             if (!firebase.apps.length) {
                 firebase.initializeApp(authConfig);
             }
@@ -74,13 +73,13 @@
            this.is_loading=false
         },
         created: function () {
-            console.log("created")
             // コンポーネント作成時に実行
             this.isTablet()
             window.addEventListener('resize', this.isTablet)
         },
         beforeDestroy: function () {
             // コンポーネント破棄時に実行
+            //TODO:メモリリークの可能性を探す
             window.removeEventListener('resize', this.isTablet)
         }
     }

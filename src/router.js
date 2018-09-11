@@ -71,10 +71,8 @@ router.beforeEach((to, from, next) => {
             }
         })
     } else {
-        // console.log(to.path+", "+from.path)
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
-                // if (to.path === '/login') next(false)
                 //ログイン中にログインページへいけないようにする
                 next({path: '/'})
             } else {

@@ -24,6 +24,8 @@
 </template>
 
 <script>
+    /* eslint-disable no-unused-vars */
+
     import firebase from 'firebase'
 
     export default {
@@ -38,8 +40,6 @@
             logIn: function () {
                 firebase.auth().signInWithEmailAndPassword(this.userId + '@test.co.jp', this.password).then(
                     user => {
-                        // alert('Login Success');
-                        console.log(user.user);
                         this.$router.push('/')
                     },
                     error => {
