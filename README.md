@@ -1,6 +1,6 @@
 # pwa Sample
 ## get start
-create "firebaseConfig.js"
+create "src/config/firebaseConfig.js"
 ```
 const authConfig = {
     apiKey: "xxxxxxxxxxxxx",
@@ -15,6 +15,28 @@ export {authConfig}
 ```
 $ npm run serve
 ```
+## run dev server
+```npm run serve```
+
+## build & deploy
+### .build
+```npm run build```
+### .firebase cli install
+```npm install -g firebase-tools```
+### .firebase login
+```firebase login```
+###deploy setting
+edit .firebaserc  
+like this↓
+```
+{
+  "projects": {
+    "default":project name"
+  }
+}
+```
+### deploy 
+```firebase deploy```
 
 ## bulma window size
 ```　
