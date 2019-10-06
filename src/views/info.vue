@@ -1,7 +1,8 @@
 <template>
     <div>
+        <!--インフォメーションページ-->
         <p class="title">インフォメーション</p>
-        <p>BBQに関する情報を流していきます</p>
+        <p>イベントに関する情報を流していきます</p>
         <div>
             <div>
                 <div v-for="(value,key) in this.$store.getters.eventInfo" v-bind:key="key">

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!--    TODO：作者の情報、なので改造した人ご自由に書き換えてください    -->
         <article class="message is-dark">
             <div class="message-header">
                 <p>Author</p>

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!--    TODO:アクセス情報    -->
         <p class="title">アクセス</p>
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-parent">
@@ -11,9 +12,9 @@
                 </article>
                 <article class="tile is-child">
                     <strong>自家用車</strong><br/>
-                    常磐自動車道流山インター → 松戸野田道路経由	約12km<br/>
-                    常盤自動車道柏インター → 国道16号線経由	約12km<br/>
-                    越谷（国道４号線）→ 野田街道経由	約12km<br/>
+                    常磐自動車道流山インター → 松戸野田道路経由 約12km<br/>
+                    常盤自動車道柏インター → 国道16号線経由 約12km<br/>
+                    越谷（国道４号線）→ 野田街道経由 約12km<br/>
                     所要時間：池袋から約１時間30分<br/>
                     第３駐車場が一番近い駐車場になります<br/>
                     ※別途駐車料金¥800かかります。<br/>
