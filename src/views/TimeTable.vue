@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!--TODO: タイムテーブルの変更-->
         <p class="title">タイムテーブル</p>
         <table class="table is-hoverable">
             <tr>
@@ -36,7 +37,7 @@
 </script>
 
 <style scoped>
-    table{
+    table {
         margin-right: auto;
         margin-left: auto;
     }
